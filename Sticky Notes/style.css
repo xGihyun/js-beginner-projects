@@ -1,0 +1,44 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    margin: 0;
+    background: rgb(74, 74, 74);
+}
+
+#app{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    padding: 25px;
+    gap: 25px;
+}
+
+.note{
+    height: 200px;
+    padding: 16px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 7px rgb(0, 0, 0);
+    resize: none;
+}
+
+.add-note{
+    height: 200px;
+    padding: 0;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 5rem;
+    background: rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: 0.2s
+}
+
+.add-note:hover{
+    background: rgba(0, 0, 0, 0.45);
+}
