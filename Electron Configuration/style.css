@@ -1,0 +1,103 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+/*
+:root{
+    --hue: 200;
+    --saturation: 100%;
+    --background: linear-gradient(to right, hsl(calc(var(--hue)), var(--saturation), 50%), hsl(calc(var(--hue) - 25), var(--saturation), 50%));
+}
+*/
+
+body{
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.atomic-num{
+    position: absolute;
+    width: 50vw;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    display: flex;
+    padding: 20px;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+
+.output{
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    display: flex;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 0%;
+    transition: 0.5s ease;
+}
+
+.output .label{
+    --position: 0%;
+
+    position: absolute;
+    width: 75%;
+    height: 25%;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    top: var(--position);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    
+}
+
+.output .answer{
+    --position: 0%;
+
+    position: absolute;
+    width: 75%;
+    height: 15%;
+    top: var(--position);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+    
+}
+
+.output .label.element-name,
+.output .answer.element-name{--position: 20%;}
+.output .label.electron-config,
+.output .answer.electron-config{--position: 50%;}
+.output .label.noble-gas-config,
+.output .answer.noble-gas-config{--position: 80%;}
+
+.hidden{
+    opacity: 0;
+}
+
+.show{
+    opacity: 100;
+}
+
+.move{
+    top: 20%;
+}
